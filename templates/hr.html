@@ -1,0 +1,49 @@
+{% extends "master.html" %}
+{% block title %}Register Page{% endblock title %}
+{% block content %}
+
+<div class="content-body">
+
+    <div class="container-fluid mt-3">
+        <h1>HR Management</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Employee List</h5>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Jane Smith</td>
+                            <td>Sales</td>
+                            <td>Manager</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning">Edit</button>
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Repeat for other employees -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+
+
+
+
+   
+    
+
+    {% endblock %}

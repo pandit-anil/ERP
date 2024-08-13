@@ -21,5 +21,5 @@ class User(AbstractUser):
     name = models.CharField(max_length=80)
     
     def __str__(self):
-        return self.name
+        return f'{self.username} x {self.name}'
     

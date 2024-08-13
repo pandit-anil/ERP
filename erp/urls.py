@@ -16,12 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import settings
+from django.conf.urls.static import static
+from .views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", IndexView.as_view(), name="home"),
     path('user-account/',include('account.urls')),
     path('inventory/',include('inventory.urls')),
     path('sales/',include('sales.urls')),
     path('accounting/',include('accounting.urls')),
     path('hr/',include('hr.urls')),
-]
+    
+]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
